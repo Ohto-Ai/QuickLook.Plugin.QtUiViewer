@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# MFractors (Xamarin productivity tool) working folder 
+.mfractor/
+/*.qlplugin
+/GitVersion.cs
+/QuickLook.Plugin.Metadata.config

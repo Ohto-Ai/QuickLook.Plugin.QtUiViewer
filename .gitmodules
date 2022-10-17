@@ -1,0 +1,6 @@
+[submodule "QuickLook.Plugin.HelloWorld"]
+	path = QuickLook.Plugin.HelloWorld
+	url = git@github.com:QL-Win/QuickLook.Plugin.HelloWorld.git
+[submodule "QuickLook.Plugin.QtUiViewer/QuickLook.Common"]
+	path = QuickLook.Plugin.QtUiViewer/QuickLook.Common
+	url = git@github.com:QL-Win/QuickLook.Common.git
