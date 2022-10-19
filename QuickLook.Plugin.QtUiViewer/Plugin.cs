@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Shapes;
 using QuickLook.Common.Plugin;
 
 namespace QuickLook.Plugin.QtUiViewer
@@ -10,17 +12,20 @@ namespace QuickLook.Plugin.QtUiViewer
     public class Plugin : IViewer
     {
         public int Priority => 0;
-        
-        [DllImport(@".\QUiViewerLib.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]//qtdialog.dll
-        public static extern int renderQtUiFile(string path);//声明qtdialog.dll里面的一个接口
+
+        [DllImport(@"QUiViewerLib.dll")]
+        public static extern void initQtApplication();
+        [DllImport(@"QUiViewerLib.dll")]
+        public static extern int renderQtUiFile(string path);
 
         public void Init()
         {
+            initQtApplication();
         }
 
         public bool CanHandle(string path)
         {
-            return !Directory.Exists(path) && path.ToLower().EndsWith(".zzz");
+            return !Directory.Exists(path) && path.ToLower().EndsWith(".ui");
         }
 
         public void Prepare(string path, ContextObject context)
@@ -30,10 +35,10 @@ namespace QuickLook.Plugin.QtUiViewer
 
         public void View(string path, ContextObject context)
         {
-            var viewer = new Label { Content = "I am a Label. I do nothing at all." };
+            //var viewer = new Label { Content = "I am a Label. I do nothing at all." };
             renderQtUiFile(path);
-            context.ViewerContent = viewer;
-            context.Title = $"{Path.GetFileName(path)}";
+            //context.ViewerContent = viewer;
+            //context.Title = $"{Path.GetFileName(path)}";
 
             context.IsBusy = false;
         }

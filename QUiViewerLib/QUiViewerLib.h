@@ -2,4 +2,5 @@
 
 #include "quiviewerlib_global.h"
 
-QUIVIEWERLIB_EXPORT int renderQtUiFile(const char* path);
+extern "C" QUIVIEWERLIB_EXPORT void initQtApplication();
+extern "C" QUIVIEWERLIB_EXPORT int renderQtUiFile(const char* path);

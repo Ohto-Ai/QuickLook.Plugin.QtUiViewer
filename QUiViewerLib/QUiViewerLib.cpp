@@ -1,15 +1,17 @@
 #include "QUiViewerLib.h"
-
 #include <QApplication>
 #include <QtUiTools/QtUiTools> 
 
-int renderQtUiFile(const char* path)
+void initQtApplication()
 {
 #if defined(Q_OS_WIN)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     int argc = 0;
-    QApplication app(argc, nullptr);
+    new QApplication(argc, nullptr);
+}
+int renderQtUiFile(const char* path)
+{
     QUiLoader loader;
     QFile ui_file;
 
@@ -18,7 +20,7 @@ int renderQtUiFile(const char* path)
     QDir::setCurrent(QFileInfo(ui_file).absolutePath());
     if (ui_file.isOpen())
     {
-        QWidget* w = loader.load(&ui_file);
+		QWidget* w = loader.load(&ui_file);
         ui_file.close();
         w->show();
     }
@@ -27,5 +29,5 @@ int renderQtUiFile(const char* path)
         return -1;
     }
 
-    return app.exec();
+    return qApp->exec();
 }

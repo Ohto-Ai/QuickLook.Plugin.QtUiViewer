@@ -49,4 +49,11 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(SolutionDir)x64\Release\QUiViewerLib.dll" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

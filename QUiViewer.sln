@@ -8,8 +8,15 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QUiViewerLib", "QUiViewerLib\QUiViewerLib.vcxproj", "{D63A6498-BE97-4A80-9728-017FE3B2AD76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLook.Plugin.QtUiViewer", "QuickLook.Plugin.QtUiViewer\QuickLook.Plugin.QtUiViewer.csproj", "{F57530AD-C713-48E8-8250-18D3770990C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D63A6498-BE97-4A80-9728-017FE3B2AD76} = {D63A6498-BE97-4A80-9728-017FE3B2AD76}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLook.Common", "QuickLook.Plugin.QtUiViewer\QuickLook.Common\QuickLook.Common.csproj", "{85FDD6BA-871D-46C8-BD64-F6BB0CB5EA95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLookLibTest", "QuickLookLibTest\QuickLookLibTest.csproj", "{691CD00F-FC78-40B2-ADBB-69DDF37E251C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QUiViewerLibTest", "QUiViewerLibTest\QUiViewerLibTest.vcxproj", "{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +76,30 @@ Global
 		{85FDD6BA-871D-46C8-BD64-F6BB0CB5EA95}.Release|x64.Build.0 = Release|Any CPU
 		{85FDD6BA-871D-46C8-BD64-F6BB0CB5EA95}.Release|x86.ActiveCfg = Release|Any CPU
 		{85FDD6BA-871D-46C8-BD64-F6BB0CB5EA95}.Release|x86.Build.0 = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|x64.Build.0 = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Debug|x86.Build.0 = Debug|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|x64.ActiveCfg = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|x64.Build.0 = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|x86.ActiveCfg = Release|Any CPU
+		{691CD00F-FC78-40B2-ADBB-69DDF37E251C}.Release|x86.Build.0 = Release|Any CPU
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|Any CPU.Build.0 = Debug|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|x64.ActiveCfg = Debug|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|x64.Build.0 = Debug|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|x86.ActiveCfg = Debug|Win32
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Debug|x86.Build.0 = Debug|Win32
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|Any CPU.ActiveCfg = Release|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|Any CPU.Build.0 = Release|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|x64.ActiveCfg = Release|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|x64.Build.0 = Release|x64
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|x86.ActiveCfg = Release|Win32
+		{AEAB3217-865B-4DCC-AB01-284FAE1EFE44}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
